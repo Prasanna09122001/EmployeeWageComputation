@@ -8,7 +8,7 @@ namespace EmployeeWageComputation
         {
             Console.WriteLine("Welcome to Employee Wage Computation");
           //  EmployeeAttendence employeeAttendence = new EmployeeAttendence();
-            EmployeeAttendence.Attendence();
+            EmployeeAttendence.CalculateEmpWage();
         }
     }
 }
