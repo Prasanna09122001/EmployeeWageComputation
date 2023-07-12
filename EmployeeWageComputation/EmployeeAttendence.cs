@@ -18,9 +18,9 @@ namespace EmployeeWageComputation
         }
         public static void CalculateEmpWage()
         {
-            int totalEmpWage = 0, empHrs = 0, TOTAL_WORKING_DAYS = 20;
+            int totalEmpWage = 0, empHrs = 0, TOTAL_WORKING_DAYS = 20, TOTAL_WORKING_HRS = 100;
             Random random = new Random();
-            for (int i = 0; i < TOTAL_WORKING_DAYS; i++)
+            for (int i = 0; i < TOTAL_WORKING_DAYS && empHrs < TOTAL_WORKING_HRS; i++)
             {
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
