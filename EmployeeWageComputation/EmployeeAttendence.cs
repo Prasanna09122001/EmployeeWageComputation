@@ -4,11 +4,8 @@ namespace EmployeeWageComputation
 {
     class EmployeeAttendence
     {
-
-    
         const int WAGE_PER_HR = 20, FULL_DAY_HR = 8, PART_DAY_HR=4, IS_FULL_TIME=0, IS_PART_TIME=1;
-
-        public static void Attendence() 
+   public static void Attendence() 
         {
             Random random = new Random();
             int empcheck = random.Next(0,2);
