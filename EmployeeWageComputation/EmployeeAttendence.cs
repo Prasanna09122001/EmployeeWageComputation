@@ -10,8 +10,8 @@ namespace EmployeeWageComputation
             Random random = new Random();
             int empcheck = random.Next(0,2);
             if (empcheck == 0)
-                Console.WriteLine("Employee is Present");
-            else Console.WriteLine("Employeee is Absent");
+                Console.WriteLine("Employee is Present");                                          
+            else Console.WriteLine("Employeee is Absent");                                         
         }
         public static void CalculateEmpWage()
         {
