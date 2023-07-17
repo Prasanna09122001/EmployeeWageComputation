@@ -4,8 +4,10 @@ namespace EmployeeWageComputation
 {
     class EmployeeAttendence
     {
-        const int WAGE_PER_HR = 20, FULL_DAY_HR = 8, PART_DAY_HR=4, IS_FULL_TIME=0, IS_PART_TIME=1;
-   public static void Attendence() 
+        const int FULL_DAY_HR = 8, PART_DAY_HR=4, IS_FULL_TIME=0, IS_PART_TIME=1;
+        int TOTAL_WORKING_DAYS, TOTAL_WORKING_HRS, WAGE_PER_HR;
+        string CompanyName;
+        public static void Attendence() 
         {
             Random random = new Random();
             int empcheck = random.Next(0,2);
@@ -13,9 +15,9 @@ namespace EmployeeWageComputation
                 Console.WriteLine("Employee is Present");                                          
             else Console.WriteLine("Employeee is Absent");                                         
         }
-        public static void CalculateEmpWage()
+        public void CalculateEmpWage(string CompanyName, int WAGE_PER_HR, int TOTAL_WORKING_DAYS, int TOTAL_WORKING_HRS )
         {
-            int totalEmpWage = 0, empHrs = 0, TOTAL_WORKING_DAYS = 20, TOTAL_WORKING_HRS = 100;
+            int totalEmpWage = 0, empHrs = 0;
             Random random = new Random();
             for (int i = 0; i < TOTAL_WORKING_DAYS && empHrs < TOTAL_WORKING_HRS; i++)
             {
@@ -34,7 +36,7 @@ namespace EmployeeWageComputation
                 }
             }
             totalEmpWage = WAGE_PER_HR * empHrs;
-            Console.WriteLine(totalEmpWage);
+            Console.WriteLine(CompanyName +"------>"+totalEmpWage);
         }
 
     }
